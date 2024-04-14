@@ -735,6 +735,7 @@
   line-height: 30px;
   font-weight: 600;
   color: #1E2331;
+  margin-top: 25px;
 
 font-family: Inter;
 font-size: 20px;
@@ -747,11 +748,12 @@ line-height: 30px; /* 150% */
   line-height: 24px;
   color: var(--gray-500);
   color: var(--Gray-500, #667085);
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 171.429% */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  margin-top: 15px;
 }
 .text-and-supporting-text {
   align-self: stretch;
@@ -779,6 +781,7 @@ line-height: 24px; /* 171.429% */
   justify-content: space-between;
   width: 1000px;
   margin-left: calc(50% - 500px);
+  margin-top: 100px;
 }
 .container3,
 .faq-section {
@@ -792,8 +795,7 @@ line-height: 24px; /* 171.429% */
   gap: var(--gap-31xl);
   text-align: left;
   font-size: var(--text-xl-regular-size);
-  margin-top: 70px;
-  margin-bottom: 100px;
+
 }
 .faq-section {
   position: absolute;

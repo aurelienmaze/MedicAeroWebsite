@@ -287,3 +287,122 @@
     max-width: 100%;
   }
 }
+
+/* ------------------ Section 3 ------------------ */
+
+.container {
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 150%;
+  padding: 80px 32px;
+  margin-top: 150px;
+  width: 80%;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.content-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 0 60px;
+}
+
+@media (max-width: 991px) {
+  .content-wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 768px;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .content {
+    max-width: 100%;
+  }
+}
+
+.heading {
+  color: #101828;
+  font: 600 36px/122% Inter, sans-serif;
+  letter-spacing: -0.72px;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .heading {
+    max-width: 100%;
+  }
+}
+
+.subheading {
+  color: #667085;
+  font: 400 20px Inter, sans-serif;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .subheading {
+    max-width: 100%;
+  }
+}
+
+.form {
+  align-self: center;
+  display: flex;
+  font-size: 16px;
+  gap: 16px;
+  margin-top: 40px;
+  height: 80%;
+}
+
+@media (max-width: 991px) {
+  .form {
+    flex-wrap: wrap;
+  }
+}
+
+.email-input {
+  background-color: #fff;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  color: #667085;
+  font: 400 16px Inter, sans-serif;
+  padding: 12px 14px 12px 16px;
+}
+
+.submit-button {
+  background-color: #b3b8b8;
+  border: 1px solid #b3b8b8;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  color: #fff;
+  font: 600 16px Inter, sans-serif;
+  padding: 12px 20px;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

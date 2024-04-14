@@ -8,6 +8,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cursor {
@@ -218,4 +221,140 @@ width: 300%;
     transform:translate(-15%,-20%)
   }
  
+}
+
+/* --- Footer --- */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 150px;
+  margin-bottom: 40px;
+}
+
+.footer-top {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .footer-top {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-logo {
+  aspect-ratio: 1.33;
+  object-fit: auto;
+  object-position: center;
+  width: 69px;
+  mix-blend-mode: multiply;
+}
+
+.footer-cta {
+  font-family: Inter, sans-serif;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0px 8px 0px -5px #1e2331;
+  background-color: #017b3b;
+  align-self: start;
+  padding: 15px 40px;
+}
+
+@media (max-width: 991px) {
+  .footer-cta {
+    padding: 0 20px;
+  }
+}
+
+.footer-nav {
+  align-self: start;
+  display: flex;
+  margin-top: 44px;
+  gap: 20px;
+  font-size: 13px;
+  color: #1d354f;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+@media (max-width: 991px) {
+  .footer-nav {
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+}
+
+.footer-nav-item {
+  font-family: Inter, sans-serif;
+}
+
+.footer-divider {
+  border-radius: 2px;
+  background-color: #1d354f;
+  min-height: 1px;
+  margin-top: 44px;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .footer-divider {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.footer-bottom {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-top: 18px;
+  width: 100%;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+@media (max-width: 991px) {
+  .footer-bottom {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-copyright {
+  color: #1d354f;
+  align-self: stretch;
+  margin: auto 0;
+  font: 600 12px Inter, sans-serif;
+}
+
+.footer-social-icons {
+  align-self: stretch;
+  display: flex;
+  padding-right: 80px;
+  gap: 20px;
+}
+
+.footer-social-icon {
+  aspect-ratio: 1.04;
+  object-fit: auto;
+  object-position: center;
+  width: 24px;
+}
+
+.footer-attribution {
+  color: #1d354f;
+  text-align: right;
+  align-self: stretch;
+  margin: auto 0;
+  font: 600 12px Inter, sans-serif;
 }
