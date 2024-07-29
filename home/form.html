@@ -161,6 +161,14 @@
         `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
       );
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var email = urlParams.get('email');
+      if (email) {
+        document.getElementById("email").value = decodeURIComponent(email);
+      }
+    });
     </script>
 </body>
 </html>

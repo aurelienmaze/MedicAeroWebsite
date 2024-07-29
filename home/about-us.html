@@ -169,6 +169,16 @@
         `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
       );
     });
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+    var form = document.querySelector(".form");
+    form.onsubmit = function(e) {
+        e.preventDefault(); // Prevent the default form submission
+        var email = document.getElementById("email").value;
+        window.location.href = "form.html?email=" + encodeURIComponent(email);
+        };
+    });
     </script>
 </body>
 </html>
