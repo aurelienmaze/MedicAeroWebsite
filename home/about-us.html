@@ -172,12 +172,33 @@
 
 
     document.addEventListener("DOMContentLoaded", function() {
-    var form = document.querySelector(".form");
-    form.onsubmit = function(e) {
-        e.preventDefault(); // Prevent the default form submission
-        var email = document.getElementById("email").value;
-        window.location.href = "form.html?email=" + encodeURIComponent(email);
-        };
+
+      var emailInput = document.getElementById("email");
+
+      // Sélectionner le bouton de soumission par son ID
+      var submitButton = document.querySelector(".submit-button");
+
+      // Ajouter un écouteur d'événements pour détecter les changements dans l'input email
+      emailInput.addEventListener("input", function() {
+          // Vérifier si l'input email contient du texte
+          if (emailInput.value.trim() !== "") {
+              // Changer la couleur de fond du bouton en vert si l'input n'est pas vide
+              submitButton.style.backgroundColor = "green";
+          } else {
+              // Réinitialiser la couleur de fond du bouton si l'input est vide
+              submitButton.style.backgroundColor = ""; // Ou spécifiez une couleur par défaut
+          }
+      });
+
+      var form = document.querySelector(".form");
+      form.onsubmit = function(e) {
+          e.preventDefault(); // Prevent the default form submission
+          var email = document.getElementById("email").value;
+          if (email.trim() === "") {
+              return;
+          }
+          window.location.href = "form.html?email=" + encodeURIComponent(email);
+          };
     });
     </script>
 </body>

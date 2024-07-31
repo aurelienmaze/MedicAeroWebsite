@@ -395,6 +395,7 @@
   color: #fff;
   font: 600 16px Inter, sans-serif;
   padding: 12px 20px;
+  transition: background-color 0.3s;
 }
 
 .visually-hidden {

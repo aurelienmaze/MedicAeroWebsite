@@ -21,8 +21,8 @@ ______________________________________________
 
 Carrousel Action :
 
-- cliquable
-- map adaptable
+X cliquable
+X map adaptable
 - plus d'actions
 
 ______________________________________________

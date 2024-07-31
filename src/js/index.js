@@ -90,10 +90,19 @@ window.addEventListener('scroll', () => {
     i=0;
 });
 
-function showLetter() {
+var actionTitle = ["Opération de la cataracte", "Distribution de Kits Scolaires", "Campagne de Sensibilisation"]
+var actionDescription = [
+    "L'opération de la cataracte menée par l'Association Humanitaire pour le Développement à Madagascar est une initiative humanitaire centrée sur la santé visuelle. Madagascar fait face à un défi majeur en matière de cécité évitable due à la cataracte, une condition qui peut être traitée avec succès grâce à une intervention chirurgicale appropriée. Cependant, de nombreuses régions de Madagascar, en particulier les zones rurales, sont confrontées à un manque d'infrastructures médicales et d'accès à des soins ophtalmologiques spécialisés.<br><br>Dans le cadre de cette mission, l'association mobilise des équipes de professionnels de la santé, notamment des chirurgiens ophtalmologistes, des infirmiers et des techniciens médicaux, pour réaliser des interventions chirurgicales de la cataracte. Les bénévoles jouent également un rôle essentiel en fournissant un soutien logistique, en sensibilisant les communautés locales et en facilitant le suivi post-opératoire.<br><br>L'objectif principal de cette opération est de restaurer la vue des personnes touchées par la cataracte, en leur offrant une chance de mener une vie normale et de contribuer activement à leurs communautés. En plus des interventions chirurgicales, l'association s'engage dans des programmes éducatifs visant à sensibiliser les populations locales à l'importance des soins oculaires préventifs.<br><br>Cette mission de lutte contre la cataracte à Madagascar représente un exemple concret de l'impact positif que des efforts humanitaires ciblés peuvent avoir sur la vie des individus et sur le développement durable des communautés. L'association s'efforce de créer un changement durable en établissant des partenariats locaux et en renforçant les capacités des professionnels de la santé malgaches afin de garantir un accès continu à des soins ophtalmologiques de qualité.</p>",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nunc nec",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nunc nec"
+]
+
+function showLetter(actionNumber) {
     document.getElementById('container').style.display = 'flex';
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('letter-box').style.display = 'block';
+    document.getElementById('letter').children[0].textContent = actionTitle[actionNumber-1];
+    document.getElementById('letter-box').children[2].innerHTML = actionDescription[actionNumber-1];
 }
 
 function hideLetter() {

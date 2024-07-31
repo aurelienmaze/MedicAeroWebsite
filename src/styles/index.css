@@ -175,6 +175,7 @@
     background: #017B3B;
     border-radius: 8px;
     z-index: 2;
+    transition: all 0.3s cubic-bezier(.4,.01,.3,1.64);
 }
 
 .allSlide {
@@ -375,7 +376,7 @@
 #letter-box p {
     margin-top: 80px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     font-family: Inter;
     color: #667085;
     padding-left: 80px;
@@ -389,10 +390,12 @@
 }
 
 #letter p {
-    font-size: 24px;
-    font-weight: 500;
-    font-family: Inter;
     color: #1E2331;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     margin-top: 40px;
 }
 
