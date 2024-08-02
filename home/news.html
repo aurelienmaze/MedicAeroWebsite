@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr" id="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités - MedicAero</title>
+    <link rel="stylesheet" href="../src/styles/news.css" />
+    <link rel="stylesheet" href="../src/styles/global.css" />
+    <link rel="stylesheet" href="../src/styles/home-desktop.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto Slab:wght@700;800&display=swap"
+    />
+    <script src="../src/main.js" defer></script>
+    <script src="../src/js/index.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div  class="hero">
+    <div id="cursor" class="cursor">
+      <div class="ring">
+        <div><!--Border--></div>
+      </div>
+      <div class="ring">
+        <div><!--Pointer--></div>		
+      </div>
+    </div>
+    <nav>
+        <img src="assets/medicAeroLogo.png" alt="MedicAero">
+        <div id="menuSeparator"></div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about-us.html">Qui sommes-nous ?</a></li>
+            <li><a href="teams.html">Nos équipes</a></li>
+            <li><div id="currentPage"><a href="news.html">Actualités</a></div></li>
+            <li class="donate-button"><a href="https://www.helloasso.com/associations/medicaero-madagascar/formulaires/1" target="_blank">Faire un don</a></li>
+        </ul>
+        <a href="form.html">
+            <div class="firstActionButton">
+                <p>Nous contacter</p>
+            </div>
+        </a>
+    </nav>
+
+    <section class="about-us-section">
+      <span class="about-us-tag">Actualités</span>
+      <h2 class="about-us-title">Toutes nos Actualités</h2>
+      <p class="about-us-description">
+        Retrouvez ici toutes nos actualités à propos de MedicAero. Découvrez nos actions, nos projets et nos événements.
+      </p>
+    </section>
+
+    <div id="newsCardsGroup">
+        <a href="./news-reader.html?id=1">
+        <div class="newsCard">
+          <img src="./assets/image-21@2x.png" alt="News 1">
+          <div class="newsContent">
+            <p class="newsTitle">SOIREE THEATRE MEDICAERO</p>
+            <p class="newsParagraph">Le samedi 19 Mars à 18h la compagnie”A quoi Jouez Vous” présentera “Lorsque l’enfant parait ” d’André Roussin au théâtre Montmartre -Galabru Paris 75018</p>
+            <p class="ellipsis">...</p>
+            <p class="redirectionAction redirection">Lire l'article ➔</p>
+          </div>
+        </div>
+        </a>
+        <a href="./news-reader.html?id=1">
+        <div class="newsCard">
+          <img src="./assets/image-2@2x.png" alt="News 1">
+            <div class="newsContent">
+              <p class="newsTitle">Les Échos de la Brousse 02/12/19</p>
+              <p class="newsParagraph">La mission de novembre 2019, était composée de huit volontaires: deux généralistes, deux gynécologues obstétriciennes, une cardiopédiatre, deux pédiatres, un ophtalmologue</p>
+              <p class="ellipsis">...</p>
+              <p class="redirectionAction redirection">Lire l'article ➔</p>
+            </div>
+        </div>
+        </a>
+        <a href="./news-reader.html?id=1">
+        <div class="newsCard">
+          <img src="./assets/rectangle-71@2x.png" alt="News 1">
+            <div class="newsContent">
+              <p class="newsTitle">Les Échos de la Brousse 30/05/18</p>
+              <p class="newsParagraph">Plus à l’ouest d’Ampanihy, on se dirige vers Ankylimivory. Avec Heliarisoa la sagefemme du site, je vois de nombreuses patientes enceintes. Mais une jeune femme attire mon attention car son abdomen est considérablement distendu. Et elle n’est pas enceinte.</p>
+              <p class="ellipsis">...</p>
+              <p class="redirectionAction redirection">Lire l'article ➔</p>
+            </div>
+        </div>
+        </a>
+        <a href="./news-reader.html?id=1">
+            <div class="newsCard">
+              <img src="./assets/image-2@2x.png" alt="News 1">
+                <div class="newsContent">
+                  <p class="newsTitle">Les Échos de la Brousse 02/12/19</p>
+                  <p class="newsParagraph">La mission de novembre 2019, était composée de huit volontaires: deux généralistes, deux gynécologues obstétriciennes, une cardiopédiatre, deux pédiatres, un ophtalmologue</p>
+                  <p class="ellipsis">...</p>
+                  <p class="redirectionAction redirection">Lire l'article ➔</p>
+                </div>
+            </div>
+            </a>
+            <a href="./news-reader.html?id=1">
+                <div class="newsCard">
+                  <img src="./assets/rectangle-71@2x.png" alt="News 1">
+                    <div class="newsContent">
+                      <p class="newsTitle">Les Échos de la Brousse 30/05/18</p>
+                      <p class="newsParagraph">Plus à l’ouest d’Ampanihy, on se dirige vers Ankylimivory. Avec Heliarisoa la sagefemme du site, je vois de nombreuses patientes enceintes. Mais une jeune femme attire mon attention car son abdomen est considérablement distendu. Et elle n’est pas enceinte.</p>
+                      <p class="ellipsis">...</p>
+                      <p class="redirectionAction redirection">Lire l'article ➔</p>
+                    </div>
+                </div>
+                </a>
+      </div>
+
+      <style>
+        #newsCardsGroup {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-top: 100px;
+            width: 50%;
+            gap: calc((100% - (250px * 3)) / 2);
+        }
+    
+        .newsCard{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 250px;
+            height: 350px;
+            background-color: #FFF;
+            border-radius: 24px;
+            box-sizing: border-box;
+            border: 3px solid #4c4c4c00;
+            transition: all 0.3s;
+            overflow: hidden;
+            margin-bottom: 70px;
+        }
+    
+        .newsCard:hover{
+            transform: scale(1.05) rotate(-2deg);
+            border: 3px solid #4c4c4cca;
+        }
+    
+        .newsCard img{
+            width: 100%;
+            height: 45%;
+            object-fit: cover;
+        }
+    
+        .newsContent{
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    
+        .newsTitle{
+            font-size: 18px;
+            font-weight: 700;
+            color: #1E2331;
+            margin-top: 20px;
+        }
+    
+        .newsParagraph {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #1E2331;
+            margin-top: 10px;
+            overflow: hidden; /* Ensure the overflow text is hidden */
+            height: 50px;
+            width: 100%;
+        }
+    
+        .ellipsis{
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            color: #1E2331;
+        }
+    
+        .redirectionAction {
+            opacity: 0;
+            transition: all 0.3s;
+        }
+    
+        .newsCard:hover .redirectionAction {
+            opacity: 1;
+        }
+
+        .redirection {
+            margin-top: 8px;
+            color: #009c1a;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            cursor: pointer;
+        }
+      </style>
+
+    <section class="container">
+      <div class="content-wrapper">
+        <div class="content">
+          <h2 class="heading">Vous souhaitez agir avec nous ?</h2>
+          <p class="subheading">Faisons connaissance</p>
+          <form class="form">
+            <label for="email" class="visually-hidden">Entrer votre email</label>
+            <input type="email" id="email" class="email-input" placeholder="Entrer votre email" />
+            <button type="submit" class="submit-button">Nous rejoindre</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="footer-top">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c1873a22f00d3e737d422b899e2eeb1c5e8b1e14d9a810d2379e6b6af9345c5?apiKey=9d6774af2521410786f0d581c4d56558&"
+          class="footer-logo"
+        />
+        <div class="footer-cta">Je veux aider</div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-nav-item">Accueil</div>
+        <div class="footer-nav-item">Qui sommes-nous ?</div>
+        <div class="footer-nav-item">Nos équipes</div>
+        <div class="footer-nav-item">Nous soutenir</div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          Copyright © 2023 MedicAero / Tous droits réservés
+        </div>
+        <div class="footer-social-icons">
+          <img
+            loading="lazy"
+            src="assets/-icon-instagram-fill-icon.svg"
+            class="footer-social-icon"
+          />
+          <img
+            loading="lazy"
+            src="assets/-icon-facebook.svg"
+            class="footer-social-icon"
+          />
+          <img
+            loading="lazy"
+            src="assets/-icon-linkedin.svg"
+            class="footer-social-icon"
+          />
+        </div>
+        <div class="footer-attribution">
+          Site créé par Aurélien Maze
+        </div>
+      </div>
+    </div>
+    
+  </div>  
+
+  <script>
+
+    $(window).mousemove(function (e) {
+      $(".ring").css(
+        "transform",
+        `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
+      );
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      var emailInput = document.getElementById("email");
+
+      // Sélectionner le bouton de soumission par son ID
+      var submitButton = document.querySelector(".submit-button");
+
+      // Ajouter un écouteur d'événements pour détecter les changements dans l'input email
+      emailInput.addEventListener("input", function() {
+          // Vérifier si l'input email contient du texte
+          if (emailInput.value.trim() !== "") {
+              // Changer la couleur de fond du bouton en vert si l'input n'est pas vide
+              submitButton.style.backgroundColor = "green";
+          } else {
+              // Réinitialiser la couleur de fond du bouton si l'input est vide
+              submitButton.style.backgroundColor = ""; // Ou spécifiez une couleur par défaut
+          }
+      });
+
+      var form = document.querySelector(".form");
+      form.onsubmit = function(e) {
+          e.preventDefault(); // Prevent the default form submission
+          var email = document.getElementById("email").value;
+          if (email.trim() === "") {
+              return;
+          }
+          window.location.href = "form.html?email=" + encodeURIComponent(email);
+          };
+    });
+    </script>
+</body>
+</html>

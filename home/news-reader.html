@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr" id="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités - MedicAero</title>
+    <link rel="stylesheet" href="../src/styles/global.css" />
+    <link rel="stylesheet" href="../src/styles/home-desktop.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto Slab:wght@700;800&display=swap"
+    />
+    <script src="../src/main.js" defer></script>
+    <script src="../src/js/index.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <img src="./assets/-icon-arrow-right.svg" class="return" onclick="returnToPreviousPage()">
+        <div id="cursor" class="cursor">
+          <div class="ring">
+            <div><!--Border--></div>
+          </div>
+          <div class="ring">
+            <div><!--Pointer--></div>		
+          </div>
+        </div>
+    <div class="container">
+        <div class="letter">
+            <h1 class="title">Les Échos de la Brousse 02/12/19</h1>
+            <img src="./assets/image-21@2x.png" alt="" class="image-placeholder">
+            <p>
+            En novembre 2019, une équipe de huit médecins volontaires, comprenant des généralistes, des gynécologues obstétriciennes, une cardiopédiatre, des pédiatres et un ophtalmologue, a participé à une mission à Madagascar. Leur objectif principal était de fournir des soins médicaux spécialisés dans des régions reculées, souvent inaccessibles par voie terrestre. Cette initiative a été rendue possible grâce à la collaboration avec l'ONG Médicaéro et Aviation Sans Frontières, qui ont facilité le transport aérien de l'équipe médicale vers des zones enclavées comme Ampanihy et Ejeda.
+            <br><br>
+            L'une des réussites notables de cette mission a été la consultation de cardiologie pédiatrique au CHU de Tuléar. Grâce aux partenariats avec le Dr LEKA du CHU et des associations comme Mécénat Chirurgie Cardiaque, plusieurs enfants souffrant de cardiopathies ont pu être diagnostiqués et préparés pour des interventions chirurgicales en France. Cette collaboration internationale a permis à des enfants comme Espérance et Marie Neilha de recevoir des traitements vitaux et de retourner en bonne santé auprès de leurs familles.
+            <br><br>
+            Les missions ophtalmologiques ont également mis en évidence la nécessité d'investir dans du matériel chirurgical portable. L'équipe a pu effectuer des consultations et des interventions limitées, mais l'énorme demande de soins oculaires, notamment pour les cataractes et les glaucomes, a souligné le besoin urgent d'installations mieux équipées pour les futures missions. Cette priorité a été reconnue pour l'année 2020 afin d'améliorer les soins chirurgicaux disponibles en brousse.
+            <br><br>
+            En outre, les médecins ont joué un rôle crucial dans la formation des équipes locales. Des cours de cardiologie ont été dispensés aux jeunes internes et au personnel de réanimation au CHU de Tuléar, ainsi qu'aux équipes de santé à Ampanihy. Cette transmission de savoir est essentielle pour améliorer les pratiques médicales locales et assurer une prise en charge continue des patients entre les missions. La mission a également traité des cas de maladies infectieuses comme le paludisme, en sensibilisant les soignants locaux aux protocoles de traitement appropriés pour éviter les rechutes.
+        </p>
+    </div>
+    <div class="space"></div>
+    <style>
+        body {
+            margin: 0;
+            background-color: #EFF5F5;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: scroll;
+        }
+
+        .return {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            position: fixed; 
+            top: 8%; 
+            left: 200px; 
+            transform: rotate(180deg) scale(1);
+            transition: all 0.3s cubic-bezier(.39,.02,.65,1.66);
+            background-color: white;
+            padding: 10px;
+            border-radius: 100px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .return:hover {
+            transform: rotate(210deg) scale(1.1);
+        }
+
+        .container {
+            position: relative;
+            width: 40%;
+            height: 70%;
+            transition: all 0.3s cubic-bezier(.4,.01,.3,1.64);
+        }
+
+        .letter {
+            position: absolute;
+            top: 100%;
+            transform: scale(0.9);
+            width: 100%;
+            margin-left: -70px;
+            background-color: white;
+            border: 2px solid black;
+            border-style: dashed;
+            padding: 70px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(.39,.02,.65,1.66);
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        .title {
+            text-align: left;
+            
+            font: 600 36px Roboto Slab, sans-serif;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            font: 300 16px Roboto Slab, sans-serif;
+            font-stretch: expanded;
+        }
+
+        .space {
+            position: absolute;
+            bottom: -100%;
+            height: 100px;
+            width: 100%;
+        }
+
+    </style>
+
+    <script src="./../src/js/news.js"></script>
+
+    <script>
+        $(window).mousemove(function (e) {
+      $(".ring").css(
+        "transform",
+        `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
+      );
+    });
+    </script>
+</body>
+</html>

@@ -37,6 +37,7 @@
             <li><div id="currentPage"><a href="index.html">Accueil</a></div></li>
             <li><a href="about-us.html">Qui sommes-nous ?</a></li>
             <li><a href="teams.html">Nos équipes</a></li>
+            <li><a href="news.html">Actualités</a></li>
             <li class="donate-button"><a href="https://www.helloasso.com/associations/medicaero-madagascar/formulaires/1" target="_blank">Faire un don</a></li>
         </ul>
         <a href="form.html">
@@ -74,38 +75,44 @@
       <h2 class="title">Notre Actualité</h2>
       
       <div id="newsCardsGroup">
+        <a href="">
         <div class="newsCard">
           <img src="./assets/image-21@2x.png" alt="News 1">
           <div class="newsContent">
             <p class="newsTitle">SOIREE THEATRE MEDICAERO</p>
             <p class="newsParagraph">Le samedi 19 Mars à 18h la compagnie”A quoi Jouez Vous” présentera “Lorsque l’enfant parait ” d’André Roussin au théâtre Montmartre -Galabru Paris 75018</p>
             <p class="ellipsis">...</p>
-            <a href="https://www.helloasso.com/associations/medicaero-madagascar/formulaires/1" target="_blank"><p class="redirection">Lire l'article ➔</p></a>
+            <p class="redirectionAction redirection">Lire l'article ➔</p>
           </div>
+        </div>
+        </a>
+        <a href="">
+        <div class="newsCard">
+          <img src="./assets/image-2@2x.png" alt="News 1">
+            <div class="newsContent">
+              <p class="newsTitle">Les Échos de la Brousse 02/12/19</p>
+              <p class="newsParagraph">La mission de novembre 2019, était composée de huit volontaires: deux généralistes, deux gynécologues obstétriciennes, une cardiopédiatre, deux pédiatres, un ophtalmologue</p>
+              <p class="ellipsis">...</p>
+              <p class="redirectionAction redirection">Lire l'article ➔</p>
+            </div>
+        </div>
+        </a>
+        <a href="">
+        <div class="newsCard">
+          <img src="./assets/rectangle-71@2x.png" alt="News 1">
+            <div class="newsContent">
+              <p class="newsTitle">Les Échos de la Brousse 30/05/18</p>
+              <p class="newsParagraph">Plus à l’ouest d’Ampanihy, on se dirige vers Ankylimivory. Avec Heliarisoa la sagefemme du site, je vois de nombreuses patientes enceintes. Mais une jeune femme attire mon attention car son abdomen est considérablement distendu. Et elle n’est pas enceinte.</p>
+              <p class="ellipsis">...</p>
+              <p class="redirectionAction redirection">Lire l'article ➔</p>
+            </div>
+        </div>
+        </a>
+        <div class="newsCard" style="justify-content: center; align-items: center;width: auto; ">
+          <a href="URL_DES_AUTRES_ACTUALITES" class="newsButton"><p>&nbsp;&nbsp;   ➔  &nbsp;&nbsp; </p></a>
+        </div>
       </div>
-      <div class="newsCard">
-        <img src="./assets/image-2@2x.png" alt="News 1">
-          <div class="newsContent">
-            <p class="newsTitle">Les Échos de la Brousse 02/12/19</p>
-            <p class="newsParagraph">La mission de novembre 2019, était composée de huit volontaires: deux généralistes, deux gynécologues obstétriciennes, une cardiopédiatre, deux pédiatres, un ophtalmologue</p>
-            <p class="ellipsis">...</p>
-            <a href="https://www.helloasso.com/associations/medicaero-madagascar/formulaires/1" target="_blank"><p class="redirection">Lire l'article ➔</p></a>
-          </div>
-      </div>
-      <div class="newsCard">
-        <img src="./assets/rectangle-71@2x.png" alt="News 1">
-          <div class="newsContent">
-            <p class="newsTitle">Les Échos de la Brousse 30/05/18</p>
-            <p class="newsParagraph">Plus à l’ouest d’Ampanihy, on se dirige vers Ankylimivory. Avec Heliarisoa la sagefemme du site, je vois de nombreuses patientes enceintes. Mais une jeune femme attire mon attention car son abdomen est considérablement distendu. Et elle n’est pas enceinte.</p>
-            <p class="ellipsis">...</p>
-            <a href="https://www.helloasso.com/associations/medicaero-madagascar/formulaires/1" target="_blank"><p class="redirection">Lire l'article ➔</p></a>
-          </div>
-      </div>
-
-      <div class="newsCard" style="justify-content: center; align-items: center;width: 50px;">
-        <a href="URL_DES_AUTRES_ACTUALITES" class="newsButton">Voir plus d'actualités</a>
-      </div>
-  </div>
+      
   
   <style>
     #newsCardsGroup {
@@ -156,7 +163,7 @@
     .newsParagraph {
         display: block;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 500;
         color: #1E2331;
         margin-top: 10px;
         overflow: hidden; /* Ensure the overflow text is hidden */
@@ -171,12 +178,12 @@
         color: #1E2331;
     }
 
-    .redirection {
+    .redirectionAction {
         opacity: 0;
         transition: all 0.3s;
     }
 
-    .newsCard:hover .redirection{
+    .newsCard:hover .redirectionAction {
         opacity: 1;
     }
   </style>
@@ -406,6 +413,7 @@
       path {
           transition: fill .5s;
       }
+
     </style>
 
     <div id="container">
