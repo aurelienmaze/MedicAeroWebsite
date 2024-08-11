@@ -1,5 +1,8 @@
 // Get the navigation element
 const nav = document.querySelector('nav');
+const burgerMenuButton = document.querySelector('.burgerMenuButton');
+const burgerMenu = document.getElementById('burgerMenu');
+var burgerMenuOpen = false;
 
 // Store the previous scroll position
 let prevScrollPos = window.scrollY;
@@ -37,37 +40,40 @@ function animate100to120(timestamp) {
 // Function to handle scroll event
 function handleScroll() {
     // Get the current scroll position
-    const currentScrollPos = window.scrollY;
 
-    // Check if the user is at the top of the page
-    if (currentScrollPos === 0) {
-        // Set the background color to transparent
-        nav.style.backgroundColor = 'transparent';
-        // Enlever shadow   
-        nav.style.boxShadow = 'none';
-        // Enelver le border bottom
-        nav.style.borderBottom = 'none';
-        if (nav.style.height != '120px' && start === null) {
-            window.requestAnimationFrame(animate100to120);
-        }
-    } else {
-        /*// Check the scroll direction
-        if (currentScrollPos > prevScrollPos) {
-            // Scrolling down, hide the navigation bar
-            nav.style.transform = 'translateY(-100%)';
+    var currentScrollPos = window.scrollY;
+
+    if (window.innerWidth > 1200) {
+        // Check if the user is at the top of the page
+        if (currentScrollPos === 0) {
+            // Set the background color to transparent
+            nav.style.backgroundColor = 'transparent';
+            // Enlever shadow   
+            nav.style.boxShadow = 'none';
+            // Enelver le border bottom
+            nav.style.borderBottom = 'none';
+            if (nav.style.height != '120px' && start === null) {
+                window.requestAnimationFrame(animate100to120);
+            }
         } else {
-            // Scrolling up, show the navigation bar
-            nav.style.transform = 'translateY(0)';
-        }*/
-        nav.style.backgroundColor = 'rgba(239, 245, 245, 1)';
-        // Enlever shadow   
-        nav.style.boxShadow = '0px 4px 0px 0px rgba(0, 0, 0, 0.25)';
-        // Enelver le border bottom
-        nav.style.borderBottom = '2px solid #1E3120';
-        if (nav.style.height != '100px' && start === null) {
-            window.requestAnimationFrame(animate120to100);
+            /*// Check the scroll direction
+            if (currentScrollPos > prevScrollPos) {
+                // Scrolling down, hide the navigation bar
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up, show the navigation bar
+                nav.style.transform = 'translateY(0)';
+            }*/
+            nav.style.backgroundColor = 'rgba(239, 245, 245, 1)';
+            // Enlever shadow   
+            nav.style.boxShadow = '0px 4px 0px 0px rgba(0, 0, 0, 0.25)';
+            // Enelver le border bottom
+            nav.style.borderBottom = '2px solid #1E3120';
+            if (nav.style.height != '100px' && start === null) {
+                window.requestAnimationFrame(animate120to100);
+            }
+            
         }
-        
     }
 
     // Update the previous scroll position
@@ -76,6 +82,10 @@ function handleScroll() {
 
 // Add scroll event listener
 window.addEventListener('scroll', handleScroll);
+
+if (window.innerWidth < 1200) {
+    handleScroll();
+}
 
 // Sélectionnez les éléments
 const cursor = document.querySelector('#cursor');
@@ -106,3 +116,16 @@ document.addEventListener('mouseover', e => {
         console.log('not pointer');
     }
 });*/
+
+// Burger menu
+
+burgerMenuButton.addEventListener('click', () => {
+    console.log('click');
+    if (burgerMenuOpen) {
+        burgerMenu.style.left = "100%";
+        burgerMenuOpen = false;
+    } else {
+        burgerMenu.style.left = "0%";
+        burgerMenuOpen = true;
+    }
+});

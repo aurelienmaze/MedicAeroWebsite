@@ -119,8 +119,15 @@
             flex-wrap: wrap;
             justify-content: flex-start;
             margin-top: 100px;
-            width: 50%;
+            width: 60%;
             gap: calc((100% - (250px * 3)) / 2);
+        }
+
+        @media (max-width: 1350px) {
+            #newsCardsGroup {
+              justify-content: center;
+              gap: calc((100% - (250px * 2)) / 2);
+            }
         }
     
         .newsCard{

@@ -2,7 +2,7 @@
 <html lang="fr" id="">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MedicAero</title>
     <link rel="stylesheet" href="../src/styles/index.css" />
     <link rel="stylesheet" href="../src/styles/global.css" />
@@ -45,6 +45,28 @@
                 <p>Nous contacter</p>
             </div>
         </a>
+        <div id="burgerMenu">
+          <div class="burgerMenuSeparator"></div>
+          <ul>
+              <li><div id="currentPage"><a href="index.html">Accueil</a></div></li>
+              <li><a href="about-us.html">Qui sommes-nous ?</a></li>
+              <li><a href="teams.html">Nos équipes</a></li>
+              <li><a href="news.html">Actualités</a></li>
+              <li class="donate-button"><a href="https://www.helloasso.com/associations/medicaero-madagascar/formulaires/1" target="_blank">Faire un don</a></li>
+          </ul>
+          <a href="form.html">
+            <div class="firstActionButtonMobile">
+                <p>Nous contacter</p>
+            </div>
+          </a>
+        </div>
+        <button class="burgerMenuButton" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+          <svg width="100" height="100" viewBox="0 0 100 100">
+            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+          </svg>
+        </button>
     </nav>
 
     <div class="mainBlock">
@@ -109,84 +131,9 @@
         </div>
         </a>
         <div class="newsCard" style="justify-content: center; align-items: center;width: auto; ">
-          <a href="URL_DES_AUTRES_ACTUALITES" class="newsButton"><p>&nbsp;&nbsp;   ➔  &nbsp;&nbsp; </p></a>
+          <a href="./news.html" class="newsButton"><p>&nbsp;&nbsp;   ➔  &nbsp;&nbsp; </p></a>
         </div>
       </div>
-      
-  
-  <style>
-    #newsCardsGroup {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 50px;
-        width: 100%;
-    }
-
-    .newsCard{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 250px;
-        height: 350px;
-        background-color: #FFF;
-        border-radius: 24px;
-        box-sizing: border-box;
-        border: 3px solid #4c4c4c00;
-        transition: all 0.3s;
-        overflow: hidden;
-    }
-
-    .newsCard:hover{
-        transform: scale(1.05) rotate(-2deg);
-        border: 3px solid #4c4c4cca;
-    }
-
-    .newsCard img{
-        width: 100%;
-        height: 45%;
-        object-fit: cover;
-    }
-
-    .newsContent{
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .newsTitle{
-        font-size: 18px;
-        font-weight: 700;
-        color: #1E2331;
-        margin-top: 20px;
-    }
-
-    .newsParagraph {
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-        color: #1E2331;
-        margin-top: 10px;
-        overflow: hidden; /* Ensure the overflow text is hidden */
-        height: 50px;
-        width: 100%;
-    }
-
-    .ellipsis{
-        display: block;
-        font-size: 14px;
-        font-weight: 400;
-        color: #1E2331;
-    }
-
-    .redirectionAction {
-        opacity: 0;
-        transition: all 0.3s;
-    }
-
-    .newsCard:hover .redirectionAction {
-        opacity: 1;
-    }
-  </style>
 
     <div class="secondBlock">
         <h2 class="title">Notre impact chez MedicAero</h2>
@@ -613,7 +560,8 @@
     }
 
     function moveSlide(actionNumber) {
-        //var oldAction = currentAction; // Stocker l'action actuelle
+      // detecter daille d'ecran width
+      if (window.innerWidth > 1200) {
         currentAction = actionNumber; // Mettre à jour la variable globale
         var currentSlide = document.querySelector('.currentSlide');
         var sizeOfCurrentSlide = currentSlide.clientHeight; // Obtenir la hauteur d'un bloc d'action
@@ -626,9 +574,49 @@
 
         // Mettre à jour la couleur de l'action actuelle
         updateActionStyle(currentAction);
-
-        console.log('Action actuelle:', currentAction); // Pour le débogage
+      }
     }
+
+    var allSlidePosition = document.querySelector('.allSlide').getBoundingClientRect().top;
+    function stickyCurrentSlide () {
+      var scrollPosition = window.scrollY + (0.33 * window.innerHeight);
+      if (window.innerWidth < 1200) {
+        document.querySelector('.currentSlide').style.transition = 'none';
+        if (scrollPosition > allSlidePosition) {
+          if (scrollPosition < allSlidePosition + document.querySelector('.allSlide').clientHeight - document.querySelector('.currentSlide').clientHeight) {
+            document.querySelector('.currentSlide').style.transform = 'translateY(' + (scrollPosition - allSlidePosition) + 'px)';
+          }
+          else {
+            document.querySelector('.currentSlide').style.transform = 'translateY(' + (document.querySelector('.allSlide').clientHeight - document.querySelector('.currentSlide').clientHeight) + 'px)';
+          }
+        }
+        else {
+          document.querySelector('.currentSlide').style.transform = 'translateY(0px)';
+        }
+      }
+      else {
+        document.querySelector('.currentSlide').style.transition = 'all 0.3s cubic-bezier(.4,.01,.3,1.64)';
+      }
+    }
+
+    window.addEventListener('scroll', stickyCurrentSlide);
+
+    // Sélectionner l'élément #multipleParagraph
+    const multipleParagraph = document.querySelector('.multipleParagraph');
+
+    // Sélectionner l'élément .slideGroup
+    const slideGroup = document.querySelector('.slideGroup');
+
+    // Ajuster la hauteur de .slideGroup pour qu'elle corresponde à la hauteur de #multipleParagraph
+    function adjustSlideGroupHeight() {
+        slideGroup.style.height = `${multipleParagraph.offsetHeight}px`;
+    }
+
+    // Appeler la fonction pour ajuster la hauteur initialement
+    adjustSlideGroupHeight();
+
+    // Ajouter un écouteur d'événements pour ajuster la hauteur lors du redimensionnement de la fenêtre
+    window.addEventListener('resize', adjustSlideGroupHeight);
     </script>
 </body>
 </html>
