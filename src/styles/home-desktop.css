@@ -797,6 +797,14 @@ line-height: 30px; /* 150% */
   font-size: var(--text-xl-regular-size);
 
 }
+
+@media screen and (min-width: 1200px) {
+  .container3 {
+    margin-top: 100px;
+    width: 100%;
+  }
+  
+}
 .faq-section {
   position: absolute;
   top: 3406px;
